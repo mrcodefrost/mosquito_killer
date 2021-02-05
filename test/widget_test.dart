@@ -12,6 +12,7 @@ import 'package:mosquito_killer/main.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
+    //MyApp is replaced with MosquitoPage as appname for material app
     await tester.pumpWidget(MosquitoPage());
 
     // Verify that our counter starts at 0.
