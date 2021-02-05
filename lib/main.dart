@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -35,6 +36,12 @@ class _MosquitoPageState extends State<MosquitoPage> {
   //   player.play('highpitch.wav');
   //   //https://freesound.org/people/sandufi/sounds/350855/
   // }
+  AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
+  void playSound() async {
+    assetsAudioPlayer.open(
+      Audio('sound/highpitch.wav'),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +53,8 @@ class _MosquitoPageState extends State<MosquitoPage> {
               child: FlatButton(
                 onPressed: () {
                   // player.play('sound/highpitch.wav');
-                  //  audioplayers package has too many bus, use assets_audio_player
+                  //  audioplayers package has too many bugs, use assets_audio_player
+                  playSound();
                 },
                 child: Image.asset('images/mosquito killer.jpg'),
               ),
